@@ -22,7 +22,7 @@ class App extends Component {
           title: "Coco puffs",
           description: "Tasty cereal",
           price: "6.50",
-          isInCart: true
+          isInCart: false
         },
         {
           imageUrl: '',
@@ -53,7 +53,7 @@ class App extends Component {
 
   buyProduct(index){
     let productsCopy = this.state.products.slice();
-    productsCopy[index].inInCart = true;
+    productsCopy[index].isInCart = true;
     this.setState({
       products: productsCopy
     })
